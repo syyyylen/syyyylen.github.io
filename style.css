@@ -22,7 +22,7 @@ h1{
 #mainTitle{
     background-color: rgb(53, 53, 53);
     color: white;
-    padding: 100px;
+    padding: 65px;
 }
 
 article{
@@ -74,7 +74,8 @@ article{
 }
 
 .pp{
-    width: 100%;
+    margin-left: 10%;
+    width: 75%;
 }
 
 .illustration{
