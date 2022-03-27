@@ -60,6 +60,7 @@ article{
     grid-template-columns: 30% 70%;
     align-items: center;
     column-gap: 3%;
+    grid-row-gap: 3%;
     padding-top: 3%;
     padding-bottom : 3%;
     padding-left: 3%;
