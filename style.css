@@ -44,7 +44,7 @@ article{
     padding-right: 3%;
     padding-left: 3%;
     padding-top: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 0%;
     align-items: center;
 }
 
@@ -60,10 +60,10 @@ article{
     grid-template-columns: 30% 70%;
     align-items: center;
     grid-gap: 3%;
-    margin-top: 3%;
-    margin-bottom :15%;
-    margin-left: 3%;
-    margin-right: 3%;
+    padding-top: 3%;
+    padding-bottom : 3%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .Topic{
@@ -78,6 +78,7 @@ article{
 
 hr{
     border: 2px solid grey;
+    margin-top: 10%;
 }
 
 .illustration{

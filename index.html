@@ -49,6 +49,8 @@
                             <img class="illustration" src="Ressources/Octree/Octree_schema.png">
                             <p>The <b>OctreeNode</b> class is a simple C# class, containing data like position or depth, and a recursive Split method.<br><br>The <b>OctreeComponent</b> works as a Navigation Volume. He manages the Root Node, the visual representation and the navmesh actualization.<br><br><b>Tolerance</b> is the purcentage of the node that must be occupied to subdivide.</p>
                             <img class="illustration" src="Ressources/Octree/Component.PNG">
+                        </div>
+                        <div id="Grid">
                             <p>This project is still in progress.<br><br>The current step is to find an appropriate <b>algorithm for finding neighbors</b> Nodes in the datastructure.<br><br>My approach for now is to use <b>locations, based on XYZ positions</b> in the parent cell.<br><br>I've illustrated the principle on a Quadtree on the right, but the logic is the same : the up right corner Node is <b>1111</b>.<br> Since every Node has a reference on her parent node, we easily can find a Node position inside the graph.</p>
                             <img class="illustration" src="Ressources/Octree/Diagram.png">
                             <div id="Octree Roadmap">
@@ -88,18 +90,15 @@
                     <div id="Experiments" class="Topic">
                         <div id="ExperimentsText">
                             <h2>Experiments</h2>
-                            <p>Smaller projects or exercices.<br>Made for learning new notions, practicing and improving my programming skills.<br>Compute Shaders, Unreal's behavior trees and Recursivity.</p>
+                            <p>Smaller projects or exercices, made for learning new notions, practicing and improving my programming skills.<br>Compute Shaders, behavior trees and rendering.</p>
                         </div>
                         <div id="ExperimentsImg">
                             <img class="illustration" src="Ressources/Experiments/Compute_Shader_Resol_50.gif" alt="Experiments">
                         </div>
-                        
                         <div id="Grid">
-                            <p>Compute shader résolution 8</p>
-                            <img class="illustration" src="Ressources/Experiments/Compute_Shader_Resol_8.gif">
-                            <p>Compute shader 1 demi million de polygones</p>
+                            <p><b>Compute Shader rendering half a million of Cubes</b><br><br>A small exercice about moving repetitive calculations on the GPU.<br><br>The goal was to have a first experience with compute buffers, rendering and HLSL.<br><br>Above, the CPU is using a GameObject, and struggling with 50*50 cubes resolution.<br><br>On the right, GPU only uses positions and mesh datas to draw and move cubes on multiple threads. Half a million of cubes are easily rendered.</p>
                             <img class="illustration" src="Ressources/Experiments/Compute_Shader_Resol_500.gif">
-                            <p>Boss fight unreal blackboard & behavior tree</p>
+                            <p><b>Boss Fight in Unreal Engine</b><br><br>My goal was to practice AI and learn about <b>state machines</b> and behavior trees.<br>In this project, the Bear is <b>a Boss, chasing and attacking player</b> with both range and melee attack.<br><br>His behavior is based on Unreal Blackboard and Behavior Tree.<br><br><b>Transitions</b> between states are <b>triggered by conditions</b>. When fullfiled, the bear switch state. Those conditions are easier to fullfill when the Boss his low on health, as a <b>fury mode</b>.</p>
                             <img class="illustration" src="Ressources/Experiments/BossFight.png">
                         </div>
                     </div>
@@ -108,14 +107,14 @@
                     <div id="Contained" class="Topic">
                         <div id="ContainedText">
                             <h2>Contained</h2>
-                            <p>Game jam game, made in 48 hours with a friend of mine.<br>The player fights ennemy waves of drones.<br>FPS Character Controller, flying drones and wave management.</p>
+                            <p>Game jam game, made in 48 hours with a friend of mine on Unity.<br>The player fights ennemy waves of drones.<br>FPS Character Controller, flying drones and wave management.</p>
                         </div>
                         <div id="ContainedImg">
                             <img class="illustration" src="Ressources/Contained/Contained.png" alt="Contained">
                         </div>
                         
                         <div id="Grid">
-                            <p>Presentation gameplay et vidéo à l'appui</p>
+                            <p>Contained <b>core gameplay</b> is fairly simple : <b>shoot at ennemy waves</b>.<br><br>This Game Jam was only about having fun for us, and <b>FPS character controller</b> was a great coding experience.<br>Player movements allows <b>a lot of mobility</b> : fast movements and double jump ability.<br><br>To <b>iterate quickly</b> on balancing, the Wave Manager was made to create new Waves quickly, using Unity data assets : <b>Scriptable Objects</b>.<br><br><b>Flying ennemy drones</b> are trying to reach an<b>optimal orbit range</b> before rotating around player, and are attacking him with a slight offset.</p>
                              <iframe class="illustration" width="560" height="315" src="https://www.youtube.com/embed/PdtGqeG6ITE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
