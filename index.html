@@ -34,20 +34,33 @@
                     <div id="Octree" class="Topic">
                         <div id="OctreeText">
                             <h2>Custom 3D NavMesh</h2>
-                            <p>Partitioning space with Octree datastructure and finding a quick path between cells with A* algorithm.</p>
+                            <p>Partitioning space with <b>Octree</b> datastructure and finding a quick path between cells with <b>A*</b> algorithm.</p>
                         </div>
                         <div id="OctreeImg">
                             <img class="illustration" src="Ressources/Octree/OctreeTracingGeometry.PNG" alt="Octree">
                         </div>
                         
+                        <div id="ProjectGoal">
+                            <h3>Project goal : Build a dynamic navigation mesh for flying agents in 3 dimentional space.</h3>
+                        </div>
+                        
                         <div id="Grid">
-                            <p>Octree Schema subdiv text Lorem Ipsum piertotum locomotor</p>
+                            <p>The idea of this project was born during a Game Jam where the player was fighting <b>flying ennemies</b>, and their pathfinding wasn't as fluent as I wanted it to be.<br><br>After reading a few things about navigation,<b>I've thought that the octree datastructure was an efficient way to retrace scene geometry</b>.<br><br>Subdividing occupied nodes is <b>adding complexity only where it's required</b> to have a precise representation of obstacles.</p>
                             <img class="illustration" src="Ressources/Octree/Octree_schema.png">
-                            <p>Adressing positions binary mamacita. Lorem Impsum Locomotor</p>
-                            <img class="illustration" src="Ressources/Octree/Diagram.png">
-                            <p>Component with tolerance Lorem Impsum Locomotor Lorem Impsum Locomotor</p>
+                            <p>The <b>OctreeNode</b> class is a simple C# class, containing data like position or depth, and a recursive Split method.<br><br>The <b>OctreeComponent</b> works as a Navigation Volume. He manages the Root Node, the visual representation and the navmesh actualization.<br><br><b>Tolerance</b> is the purcentage of the node that must be occupied to subdivide.</p>
                             <img class="illustration" src="Ressources/Octree/Component.PNG">
-                            <p>RoadMap<br>Ligne 1 <br> Ligne 2 </p>
+                            <p>This project is still in progress.<br><br>The current step is to find an appropriate <b>algorithm for finding neighbors</b> Nodes in the datastructure.<br><br>My approach for now is to use <b>locations, based on XYZ positions</b> in the parent cell.<br><br>I've illustrated the principle on a Quadtree on the right, but the logic is the same : the up right corner Node is <b>1111</b>.<br> Since every Node has a reference on her parent node, we easily can find a Node position inside the graph.</p>
+                            <img class="illustration" src="Ressources/Octree/Diagram.png">
+                            <div id="Octree Roadmap">
+                                <p><b>Project Roadmap</b></p>
+                                <ul>
+                                    <li>OctreeNode</li>
+                                    <li>Octree Component</li>
+                                    <li>Finding neighbors cells</li>
+                                    <li>Implementing A* algorithm</li>
+                                    <li>Replacing Octree Component by an Unity Tool</li>
+                                </ul>
+                            </div>
                             <img class="illustration" src="Ressources/Octree/Octree.PNG">
                         </div>
                     </div>
@@ -55,21 +68,19 @@
                     <div id="Before Dusk" class="Topic">
                         <div id="BeforeDuskText">
                             <h2>Before Dusk</h2>
-                            <p>Last year school project, 8 months of production.<br>A Voodoo doll explores a forest using her power to transfer everything harful that happens to her. <br>Strong needs in code architecture, optimization and programming physics.</p>
+                            <p>Last year school project, 8 months of production.<br>A <b>Voodoo doll</b> explores a jungle using her power to <b>transfer everything harmful that happens to her</b>. <br>Strong needs in code architecture, optimization and programming physics.</p>
                         </div>
                         <div id="BeforeDuskImg">
                             <img class="illustration" src="Ressources/BeforeDusk/BD.PNG" alt="BeforeDusk">
                         </div>
                         
                         <div id="Grid">
-                            <p>Presentation du jeu et du gameplay<br>Systeme de lien et de transfert</p>
+                            <p>In <b>Before Dusk</b>, this charming <b>Voodoo Doll</b> escapes slavery and crosses a jungle, seeking for the <b>sorceress that imprisoned her soul</b>.<br><br>The player embodies this revolted doll, which has the ability to <b>create a Voodoo link with objects or living things</b>.<br><br>When she is linked to something, <b>everything bad</b> or harmful that happens to her will equally be <b>transfered </b>to the linked entity.</p>
                             <img class="illustration" src="Ressources/BeforeDusk/Doll.PNG">
-                            <p>RoadMap<br>Ligne 1 <br> Ligne 2 </p>
+                            <p>One of the main challenges in terms of code on this project was the <b>sandbox</b> aspect of the in game interactions.<br><br>In the game, the player can <b>catch fire</b>, <b>be thrown</b> away by an <b>explosion</b>, hit walls severely... And all <b>those things must happen simultaneously</b> to the linked object or opponent.<br><br>We based our architecture on an <b>Interface</b>, IEffectable, which <b>guarantees that the object can take effects</b>.<br>Effects can be triggered under <b>conditions or transfered</b> by the player, which is also an IEffectable.</p>
                             <img class="illustration" src="Ressources/BeforeDusk/Diagram.png">
-                            <p>Adressing positions binary mamacita. Lorem Impsum Locomotor</p>
+                            <p>To help the Level Design, avoid weird behaviors and game breaking interactions we needed a <b>custom Editor</b> for IEffectables objects.<br><br>In the editor, we <b>simulate behaviors to anticipate</b> what will happen in game (fire propagation, explosion on the right).<br><br>Physics interactions aren't handled by Unity's physics engine.<br>We <b>take control over displacements</b> to have <b>predictible movements which fit our metrics </b>and sometimes unrealistic behavior that serves the gameplay.</p>
                             <img class="illustration" src="Ressources/BeforeDusk/CustomEditors.PNG">
-                            <p>Component with tolerance Lorem Impsum Locomotor Lorem Impsum Locomotor</p>
-                            <img class="illustration" src="Ressources/BeforeDusk/CustomEditorPatrolPoints.PNG">
                         </div>
                     </div>
                     <hr>
