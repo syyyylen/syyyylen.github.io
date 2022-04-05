@@ -45,7 +45,7 @@
                         </div>
                         
                         <div id="Grid">
-                            <p>The idea of this project was born during a Game Jam where the player was fighting <b>flying ennemies</b>, and their pathfinding wasn't as fluent as I wanted it to be.<br><br>After reading a few things about navigation,<b>I've thought that the octree datastructure was an efficient way to retrace scene geometry</b>.<br><br>Subdividing occupied nodes is <b>adding complexity only where it's required</b> to have a precise representation of obstacles.</p>
+                            <p>The idea of this project was born during a Game Jam where the player was fighting <b>flying enemies</b>, and their pathfinding wasn't as fluent as I wanted it to be.<br><br>After reading a few things about navigation,<b>I've thought that the octree datastructure was an efficient way to retrace scene geometry</b>.<br><br>Subdividing occupied nodes is <b>adding complexity only where it's required</b> to have a precise representation of obstacles.</p>
                             <img class="illustration" src="Ressources/Octree/Octree_schema.png">
                             <p>The <b>OctreeNode</b> class is a simple C# class, containing data like position or depth, and a recursive Split method.<br><br>The <b>OctreeComponent</b> works as a Navigation Volume. He manages the Root Node, the visual representation and the navmesh actualization.<br><br><b>Tolerance</b> is the purcentage of the node that must be occupied to subdivide.</p>
                             <img class="illustration" src="Ressources/Octree/Component.PNG">
@@ -107,14 +107,14 @@
                     <div id="Contained" class="Topic">
                         <div id="ContainedText">
                             <h2>Contained</h2>
-                            <p>Game jam game, made in 48 hours with a friend of mine on Unity.<br>The player fights ennemy waves of drones.<br>FPS Character Controller, flying drones and wave management.</p>
+                            <p>Game jam game, made in 48 hours with a friend of mine on Unity.<br>The player fights enemy waves of drones.<br>FPS Character Controller, flying drones and wave management.</p>
                         </div>
                         <div id="ContainedImg">
                             <img class="illustration" src="Ressources/Contained/Contained.png" alt="Contained">
                         </div>
                         
                         <div id="Grid">
-                            <p>Contained <b>core gameplay</b> is fairly simple : <b>shoot at ennemy waves</b>.<br><br>This Game Jam was only about having fun for us, and <b>FPS character controller</b> was a great coding experience.<br>Player movements allows <b>a lot of mobility</b> : fast movements and double jump ability.<br><br>To <b>iterate quickly</b> on balancing, the Wave Manager was made to create new Waves quickly, using Unity data assets : <b>Scriptable Objects</b>.<br><br><b>Flying ennemy drones</b> are trying to reach an<b>optimal orbit range</b> before rotating around player, and are attacking him with a slight offset.</p>
+                            <p>Contained <b>core gameplay</b> is fairly simple : <b>shoot at enemy waves</b>.<br><br>This Game Jam was only about having fun for us, and <b>FPS character controller</b> was a great coding experience.<br>Player movements allows <b>a lot of mobility</b> : fast movements and double jump ability.<br><br>To <b>iterate quickly</b> on balancing, the Wave Manager was made to create new Waves quickly, using Unity data assets : <b>Scriptable Objects</b>.<br><br><b>Flying enemy drones</b> are trying to reach an<b>optimal orbit range</b> before rotating around player, and are attacking him with a slight offset.</p>
                              <iframe class="illustration" width="560" height="315" src="https://www.youtube.com/embed/PdtGqeG6ITE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
