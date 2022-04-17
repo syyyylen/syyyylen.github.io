@@ -45,25 +45,19 @@
                         </div>
                         
                         <div id="Grid">
-                            <p>The idea of this project was born during a Game Jam where the player was fighting <b>flying enemies</b>, and their pathfinding wasn't as fluent as I wanted it to be.<br><br>After reading a few things about navigation,<b>I've thought that the octree datastructure was an efficient way to retrace scene geometry</b>.<br><br>Subdividing occupied nodes is <b>adding complexity only where it's required</b> to have a precise representation of obstacles.</p>
+                            <p>The idea of this project was born during a Game Jam where the player was fighting <b>flying enemies</b>, and their pathfinding wasn't as fluent as I wanted it to be.<br><br>After reading a few things about navigation, <b>I've thought that the octree datastructure was an efficient way to retrace scene geometry</b>.<br><br>Subdividing occupied nodes is <b>adding complexity only where it's required</b> to have a precise representation of obstacles.</p>
                             <img class="illustration" src="Ressources/Octree/Octree_schema.png">
                             <p>The <b>OctreeNode</b> class is a simple C# class, containing data like position or depth, and a recursive Split method.<br><br>The <b>OctreeComponent</b> works as a Navigation Volume. He manages the Root Node, the visual representation and the navmesh actualization.<br><br><b>Tolerance</b> is the purcentage of the node that must be occupied to subdivide.</p>
                             <img class="illustration" src="Ressources/Octree/Component.PNG">
                         </div>
                         <div id="Grid">
-                            <p>This project is still in progress.<br><br>The current step is to find an appropriate <b>algorithm for finding neighbors</b> Nodes in the datastructure.<br><br>My approach for now is to use <b>locations, based on XYZ positions</b> in the parent cell.<br><br>I've illustrated the principle on a Quadtree on the right, but the logic is the same : the up right corner Node is <b>1111</b>.<br> Since every Node has a reference on her parent node, we easily can find a Node position inside the graph.</p>
-                            <img class="illustration" src="Ressources/Octree/Diagram.png">
+                            <p>The next step was to find an alogrithm to <b>find neighbors Nodes</b>.<br><br>I first tried a <b>system of adresses</b>, with each nodes having a <b>binary adress</b>.<br><br>But I was stuck, so I've decided to <b>change my paradigm</b> and to use geometry and <b>positions calculations</b> to find the closest nodes.<br><br>With this new approach, I was quickly able to find neighbors Nodes and to have <b>this new Graph</b>, called a <b>Dual</b>.<br><br>I'm not yet satisfied by the <b>cost of the algorithm</b> which remains high, so I'll keep optimizing it in the future.</p>
+                            <img class="illustration" src="Ressources/Octree/DUAL.PNG">
                             <div id="Octree Roadmap">
-                                <p><b>Project Roadmap</b></p>
-                                <ul>
-                                    <li>OctreeNode</li>
-                                    <li>Octree Component</li>
-                                    <li>Finding neighbors cells</li>
-                                    <li>Implementing A* algorithm</li>
-                                    <li>Replacing Octree Component by an Unity Tool</li>
-                                </ul>
+                                <p>This project is still in progress.<br><br>On the left, you can see that I now have <b>every leaf Node relied to her neighbors</b>.<br><br>The next step is to <b>implement A*</b> which will iterate quickly through the Nodes and <b>find a path to the destination node</b>.
+                                </p>
                             </div>
-                            <img class="illustration" src="Ressources/Octree/Octree.PNG">
+                            <img class="illustration" src="Ressources/Octree/DUAL_2.PNG">
                         </div>
                     </div>
                     <hr>
