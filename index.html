@@ -69,16 +69,19 @@
                             <p>Last year school project, 8 months of production.<br>A <b>Voodoo doll</b> explores a jungle using her power to <b>transfer everything harmful that happens to her</b>. <br>Strong needs in code architecture, optimization and programming physics.</p>
                         </div>
                         <div id="BeforeDuskImg">
-                            <img class="illustration" src="Ressources/BeforeDusk/BD.PNG" alt="BeforeDusk">
+                            <img class="illustration" src="Ressources/BeforeDusk/Doll_room_1.png" alt="BeforeDusk">
                         </div>
                         
                         <div id="Grid">
                             <p>In <b>Before Dusk</b>, this charming <b>Voodoo Doll</b> escapes slavery and crosses a jungle, seeking for the <b>sorceress that imprisoned her soul</b>.<br><br>The player embodies this revolted doll, which has the ability to <b>create a Voodoo link with objects or living things</b>.<br><br>When she is linked to something, <b>everything bad</b> or harmful that happens to her will equally be <b>transfered </b>to the linked entity.</p>
-                            <img class="illustration" src="Ressources/BeforeDusk/Doll.PNG">
+                            <img class="illustration" src="Ressources/BeforeDusk/Doll_level_3.png">
                             <p>One of the main challenges in terms of code on this project was the <b>sandbox</b> aspect of the in game interactions.<br><br>In the game, the player can <b>catch fire</b>, <b>be thrown</b> away by an <b>explosion</b>, hit walls severely... And all <b>those things must happen simultaneously</b> to the linked object or opponent.<br><br>We based our architecture on an <b>Interface</b>, IEffectable, which <b>guarantees that the object can take effects</b>.<br>Effects can be triggered under <b>conditions or transfered</b> by the player, which is also an IEffectable.</p>
                             <img class="illustration" src="Ressources/BeforeDusk/Diagram.png">
-                            <p>To help the Level Design, avoid weird behaviors and game breaking interactions we needed a <b>custom Editor</b> for IEffectables objects.<br><br>In the editor, we <b>simulate behaviors to anticipate</b> what will happen in game (fire propagation, explosion on the right).<br><br>Physics interactions aren't handled by Unity's physics engine.<br>We <b>take control over displacements</b> to have <b>predictible movements which fit our metrics </b>and sometimes unrealistic behavior that serves the gameplay.</p>
+                            <p>To help the Level Design, avoid weird behaviors and game breaking interactions we needed a <b>custom Editor</b> for IEffectables objects.<br><br>In the editor, we <b>simulate behaviors to anticipate</b> what will happen in game (fire propagation, explosion on the right).</p>
                             <img class="illustration" src="Ressources/BeforeDusk/CustomEditors.PNG">
+                            <p><br>Physics interactions aren't handled by Unity's physics engine.<br>We <b>take control over displacements</b> to have <b>predictible movements which fit our metrics </b>.<br><br>On the right, we use a <b>kinematic equation</b> to calculate the starting velocity that spring will apply to an object in order to <b>follow a determined path</b>.
+                            </p>
+                            <img class="illustration" src="Ressources/BeforeDusk/SpringPath.gif">
                         </div>
                     </div>
                     <hr>
@@ -96,7 +99,7 @@
                             <img class="illustration" src="Ressources/Experiments/Compute_Shader_Resol_500.gif">
                             <p><b>Boss Fight in Unreal Engine</b><br><br>My goal was to practice AI and learn about <b>state machines</b> and behavior trees.<br>In this project, the Bear is <b>a Boss, chasing and attacking player</b> with both range and melee attack.<br><br>His behavior is based on Unreal Blackboard and Behavior Tree.<br><br><b>Transitions</b> between states are <b>triggered by conditions</b>. When fullfiled, the bear switch state. Those conditions are easier to fullfill when the Boss his low on health, as a <b>fury mode</b>.</p>
                             <img class="illustration" src="Ressources/Experiments/BossFight.png">
-                            <p><b>RayTracing In One WeekEnd</b><br><br>The technical demo on Unreal Engine 5 made me curious about rendering. <br><br>The book "RayTracing In One WeekEnd" by Peter Shirley is a great and quick <b>introduction to RayTracing</b>, and also made me practice C++. <br><br>My next goal in the rendering field is to improve the raytracer performances to try to make it fast enough to work at runtime.</p>
+                            <p><b>RayTracing In One WeekEnd</b><br><br>The technical demo on Unreal Engine 5 made me curious about rendering. <br><br>The book "RayTracing In One WeekEnd" by Peter Shirley is a great and quick <b>introduction to RayTracing</b>, and also made me practice C++.</p>
                             <img class="illustration" src="Ressources/RayTracing/final_scene.png">
                         </div>
                     </div>
