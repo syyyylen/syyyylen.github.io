@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Jules Vannier - Portfolio</title>
+        <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header>
+            <div id="mainTitle">
+                <h1>Jules Vannier <br> - <br>Tools Programmer</h1>
+            </div>
+        </header>
+
+        <main>
+            <article>
+                 <div id="Experiments" class="Topic">
+                        <div id="ExperimentsText">
+                            <h2>Experiments</h2>
+                            <p>Smaller projects or exercices, made for learning new notions, practicing and improving my programming skills.<br>Compute Shaders, behavior trees and rendering.</p>
+                        </div>
+                        <div id="ExperimentsImg">
+                            <img class="illustration" src="Ressources/Experiments/Montage.png" alt="Experiments">
+                        </div>
+                        <div id="Grid">
+                            <p><b>Compute Shader rendering half a million of Cubes</b><br><br>A small exercice about moving repetitive calculations on the GPU.<br><br>The goal was to have a first experience with compute buffers, rendering and HLSL.<br><br>Above, the CPU is using a GameObject, and struggling with 50*50 cubes resolution.<br><br>On the right, GPU only uses positions and mesh datas to draw and move cubes on multiple threads. Half a million of cubes are easily rendered.</p>
+                            <img class="illustration" src="Ressources/Experiments/Compute_Shader_Resol_500.gif">
+                            <p><b>Boss Fight in Unreal Engine</b><br><br>My goal was to practice AI and learn about <b>state machines</b> and behavior trees.<br>In this project, the Bear is <b>a Boss, chasing and attacking player</b> with both range and melee attack.<br><br>His behavior is based on Unreal Blackboard and Behavior Tree.<br><br><b>Transitions</b> between states are <b>triggered by conditions</b>. When fullfiled, the bear switch state. Those conditions are easier to fullfill when the Boss his low on health, as a <b>fury mode</b>.</p>
+                            <img class="illustration" src="Ressources/Experiments/BossFight.png">
+                            <p><b>RayTracing In One WeekEnd</b><br><br>The technical demo on Unreal Engine 5 made me curious about rendering. <br><br>The book "RayTracing In One WeekEnd" by Peter Shirley is a great and quick <b>introduction to RayTracing</b>, and also made me practice C++.</p>
+                            <img class="illustration" src="Ressources/RayTracing/final_scene.png">
+                        </div>
+                    </div>
+            </article>
+        </main>
+
+        <footer>
+            <header>
+                <div id="more">
+                    <h3>More about me</h3>
+                </div>
+            </header>
+            <div id="icons">
+                <a href="Ressources/CV_Vannier_Jules.pdf" download>
+                    <img class="iconImg" src="Ressources/CV_Logo.png" alt="CVLoadingFailed">
+                </a>
+                <a href="https://www.linkedin.com/in/jules-vannier/">
+                    <img class="iconImg" src="Ressources/LinkedinLogo.webp" alt="LinkedinLogo">
+                </a>
+            </div>
+        </footer>
+
+    </body>
+</html>

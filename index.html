@@ -10,7 +10,7 @@
 
         <header>
             <div id="mainTitle">
-                <h1>Jules Vannier <br> - <br>Gameplay Programmer</h1>
+                <h1>Jules Vannier <br> - <br>Tools Programmer</h1>
             </div>
         </header>
 
@@ -19,9 +19,13 @@
                 <div id="intro">
                     <div id="introText">
                         <h2>Welcome to my Portfolio !</h2>
-                        <p> Hi, I'm Jules. I'm a student in Game Design at ETPA, and I'm specialized in <b>gameplay programming</b>. 
+                        <p> 
+                            Hi, I'm Jules. I'm a <b>Tools/AI programmer </b>intern at<b> Midgar Studio</b> in Montpellier, France.
                             <br>
-                            My studies and my personal work have brought me to work mainly on <b>physics</b> and <b>AI</b>. 
+                            <br>
+                            My job there is to <b>customize our engine</b> with new functionalities and systems, and <b>provide tools for designers or artists</b>. 
+                            <br>Since we are a small team of programmers, I am also in charge of our <b>AI code architecture</b>. 
+                            <br>
                             <br>
                             You will find here <b>content about my work</b>, school projects and personal projects.
                         </p>
@@ -31,94 +35,56 @@
                 <hr>
                 
                 <div id="Content">
+                    
                     <div id="Octree" class="Topic">
                         <div id="OctreeText">
                             <h2>Custom 3D NavMesh</h2>
                             <p>Partitioning space with <b>Octree</b> datastructure and finding a quick path between cells with <b>A*</b> algorithm.</p>
                         </div>
                         <div id="OctreeImg">
-                            <img class="illustration" src="Ressources/Octree/OctreeTracingGeometry.PNG" alt="Octree">
-                        </div>
-                        
-                        <div id="ProjectGoal">
-                            <h3>Project goal : Build a dynamic navigation mesh for flying agents in 3 dimentional space.</h3>
-                        </div>
-                        
-                        <div id="Grid">
-                            <p>The idea of this project was born during a Game Jam where the player was fighting <b>flying enemies</b>, and their pathfinding wasn't as fluent as I wanted it to be.<br><br>After reading a few things about navigation, <b>I've thought that the octree datastructure was an efficient way to retrace scene geometry</b>.<br><br>Subdividing occupied nodes is <b>adding complexity only where it's required</b> to have a precise representation of obstacles.</p>
-                            <img class="illustration" src="Ressources/Octree/Octree_schema.png">
-                            <p>The <b>OctreeNode</b> class is a simple C# class, containing data like position or depth, and a few methods like the recursive Split.<br><br>The <b>Navigation Volume</b>  manages the Root Node, the visual representation and the navmesh actualization.<br><br><b>Tolerance</b> is the purcentage of the node that must be occupied to subdivide.</p>
-                            <img class="illustration" src="Ressources/Octree/Component.PNG">
-                        </div>
-                        <div id="Grid">
-                            <p>The next step was to find an alogrithm to <b>find neighbors Nodes</b>.<br><br>I first tried a <b>system of adresses</b>, with each nodes having a <b>binary adress</b>.<br><br>But I was stuck, so I've decided to <b>change my paradigm</b> and to use geometry and <b>positions calculations</b> to find the closest nodes.<br><br>With this new approach, I was quickly able to find neighbors Nodes and to have <b>this new Graph</b>, called a <b>Dual</b>.<br><br>I'm not yet satisfied by the <b>cost of the algorithm</b> which remains high, so I'll keep optimizing it in the future.</p>
-                            <img class="illustration" src="Ressources/Octree/DUAL.PNG">
-                            <div id="Octree Roadmap">
-                                <p>On the left, you can see <b>every leaf Node relied to her neighbors</b>.<br><br>Those neighbors doesn't need to be found at initialization, but I've kept a debug mode were the dual is build because it looks really pretty to me. And for debugging. Of course.<br><br>The next step was to <b>implement A*</b>.
-                                </p>
-                            </div>
-                            <img class="illustration" src="Ressources/Octree/DUAL_2.PNG">
-                            <p>I've implemented the basic version of A*, and now <b>the Agent is able to move to his destination</b>.<br><br>The path can be quickly <b>recalculated at runtime</b> if the destination of the agent changes.<br><br>The path is still <b>suboptimal</b>, and my next goal is to <b>add curves</b> to the motion make the movement more fluid.</p>
-                            <img class="illustration" src="Ressources/Octree/Nav3D_GIF.gif">
+                            <a href="3DNavigation.html">
+                                <img class="illustration" src="Ressources/Octree/Scene.PNG" alt="Octree">
+                            </a>
                         </div>
                     </div>
-                    <hr>
-                    <div id="Before Dusk" class="Topic">
+                    
+                     <div id="Before Dusk" class="Topic">
                         <div id="BeforeDuskText">
                             <h2>Before Dusk</h2>
                             <p>Last year school project, 8 months of production.<br>A <b>Voodoo doll</b> explores a jungle using her power to <b>transfer everything harmful that happens to her</b>. <br>Strong needs in code architecture, optimization and programming physics.</p>
                         </div>
                         <div id="BeforeDuskImg">
-                            <img class="illustration" src="Ressources/BeforeDusk/Doll_room_1.png" alt="BeforeDusk">
-                        </div>
-                        
-                        <div id="Grid">
-                            <p>In <b>Before Dusk</b>, this charming <b>Voodoo Doll</b> escapes slavery and crosses a jungle, seeking for the <b>sorceress that imprisoned her soul</b>.<br><br>The player embodies this revolted doll, which has the ability to <b>create a Voodoo link with objects or living things</b>.<br><br>When she is linked to something, <b>everything bad</b> or harmful that happens to her will equally be <b>transfered </b>to the linked entity.</p>
-                            <img class="illustration" src="Ressources/BeforeDusk/Doll_level_3.png">
-                            <p>One of the main challenges in terms of code on this project was the <b>sandbox</b> aspect of the in game interactions.<br><br>In the game, the player can <b>catch fire</b>, <b>be thrown</b> away by an <b>explosion</b>, hit walls severely... And all <b>those things must happen simultaneously</b> to the linked object or opponent.<br><br>We based our architecture on an <b>Interface</b>, IEffectable, which <b>guarantees that the object can take effects</b>.<br>Effects can be triggered under <b>conditions or transfered</b> by the player, which is also an IEffectable.</p>
-                            <img class="illustration" src="Ressources/BeforeDusk/Diagram.png">
-                            <p>To help the Level Design, avoid weird behaviors and game breaking interactions we needed a <b>custom Editor</b> for IEffectables objects.<br><br>In the editor, we <b>simulate behaviors to anticipate</b> what will happen in game (fire propagation, explosion on the right).</p>
-                            <img class="illustration" src="Ressources/BeforeDusk/CustomEditors.PNG">
-                            <p><br>Physics interactions aren't handled by Unity's physics engine.<br>We <b>take control over displacements</b> to have <b>predictible movements which fit our metrics </b>.<br><br>On the right, we use a <b>kinematic equation</b> to calculate the starting velocity that spring will apply to an object in order to <b>follow a determined path</b>.
-                            </p>
-                            <img class="illustration" src="Ressources/BeforeDusk/SpringPath.gif">
+                            <a href="BeforeDusk.html">
+                                <img class="illustration" src="Ressources/BeforeDusk/Doll_room_1.png" alt="BeforeDusk">
+                            </a>
                         </div>
                     </div>
-                    <hr>
-
+                         
                     <div id="Experiments" class="Topic">
                         <div id="ExperimentsText">
                             <h2>Experiments</h2>
                             <p>Smaller projects or exercices, made for learning new notions, practicing and improving my programming skills.<br>Compute Shaders, behavior trees and rendering.</p>
                         </div>
                         <div id="ExperimentsImg">
-                            <img class="illustration" src="Ressources/Experiments/Montage.png" alt="Experiments">
-                        </div>
-                        <div id="Grid">
-                            <p><b>Compute Shader rendering half a million of Cubes</b><br><br>A small exercice about moving repetitive calculations on the GPU.<br><br>The goal was to have a first experience with compute buffers, rendering and HLSL.<br><br>Above, the CPU is using a GameObject, and struggling with 50*50 cubes resolution.<br><br>On the right, GPU only uses positions and mesh datas to draw and move cubes on multiple threads. Half a million of cubes are easily rendered.</p>
-                            <img class="illustration" src="Ressources/Experiments/Compute_Shader_Resol_500.gif">
-                            <p><b>Boss Fight in Unreal Engine</b><br><br>My goal was to practice AI and learn about <b>state machines</b> and behavior trees.<br>In this project, the Bear is <b>a Boss, chasing and attacking player</b> with both range and melee attack.<br><br>His behavior is based on Unreal Blackboard and Behavior Tree.<br><br><b>Transitions</b> between states are <b>triggered by conditions</b>. When fullfiled, the bear switch state. Those conditions are easier to fullfill when the Boss his low on health, as a <b>fury mode</b>.</p>
-                            <img class="illustration" src="Ressources/Experiments/BossFight.png">
-                            <p><b>RayTracing In One WeekEnd</b><br><br>The technical demo on Unreal Engine 5 made me curious about rendering. <br><br>The book "RayTracing In One WeekEnd" by Peter Shirley is a great and quick <b>introduction to RayTracing</b>, and also made me practice C++.</p>
-                            <img class="illustration" src="Ressources/RayTracing/final_scene.png">
+                            <a href="Experiments.html">
+                                <img class="illustration" src="Ressources/Experiments/Montage.png" alt="Experiments">
+                            </a>
                         </div>
                     </div>
-                    <hr>
-
-                    <div id="Contained" class="Topic">
+                    
+                     <div id="Contained" class="Topic">
                         <div id="ContainedText">
                             <h2>Contained</h2>
                             <p>Game jam game, made in 48 hours with a friend of mine on Unity.<br>The player fights enemy waves of drones.<br>FPS Character Controller, flying drones and wave management.</p>
                         </div>
                         <div id="ContainedImg">
-                            <img class="illustration" src="Ressources/Contained/Contained.png" alt="Contained">
-                        </div>
-                        
-                        <div id="Grid">
-                            <p>Contained <b>core gameplay</b> is fairly simple : <b>shoot at enemy waves</b>.<br><br>This Game Jam was only about having fun for us, and <b>FPS character controller</b> was a great coding experience.<br>Player movements allows <b>a lot of mobility</b> : fast movements and double jump ability.<br><br>To <b>iterate quickly</b> on balancing, the Wave Manager was made to create new Waves quickly, using Unity data assets : <b>Scriptable Objects</b>.<br><br><b>Flying enemy drones</b> are trying to reach an<b>optimal orbit range</b> before rotating around player, and are attacking him with a slight offset.</p>
-                             <iframe class="illustration" width="560" height="315" src="https://www.youtube.com/embed/PdtGqeG6ITE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="Contained.html">
+                                <img class="illustration" src="Ressources/Contained/Contained.png" alt="Contained">
+                            </a>
                         </div>
                     </div>
+                    
+                    
                 </div>
             </article>
         </main>

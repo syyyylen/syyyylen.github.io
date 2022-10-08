@@ -48,6 +48,7 @@ article{
     align-items: center;
 }
 
+
 #Content{
     margin-top: 3%;
     margin-bottom: 3%;
@@ -79,7 +80,7 @@ article{
 
 hr{
     border: 2px solid grey;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
 .illustration{
