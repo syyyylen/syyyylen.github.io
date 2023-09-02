@@ -6,6 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://syyyylen.github.io/blog"/>
     <subtitle>Sylen Code Plugins Documentation Blog</subtitle>
+    <icon>https://syyyylen.github.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>https://syyyylen.github.io/blog/welcome</id>
