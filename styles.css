@@ -253,9 +253,10 @@ nav .container {
 .image-with-caption img {
     width: 100%;
     aspect-ratio: 16/9;
-    object-fit: cover;
+    object-fit: contain;
     border: 1px solid #4b5563;
     margin-bottom: 8px;
+    background: #1f2937;
 }
 
 .image-caption {
@@ -282,7 +283,8 @@ nav .container {
 .content-image:has(img + img):not(:has(.image-with-caption)) img {
     width: 100%;
     aspect-ratio: 16/9;
-    object-fit: cover;
+    object-fit: contain;
+    background: #1f2937;
 }
 
 @media (max-width: 768px) {
