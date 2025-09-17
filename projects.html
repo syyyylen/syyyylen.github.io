@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jules Vannier - Tools & Graphics Programmer</title>
-    <meta name="description" content="Jules Vannier - Tools/Graphics Programmer.">
+    <title>Projects - Jules Vannier</title>
+    <meta name="description" content="Jules Vannier - Projects.">
     <style>
         * {
             margin: 0;
@@ -70,13 +70,18 @@
             color: #f1f5f9;
         }
         
-        .hero {
+        .nav-links a.current {
+            color: #f1f5f9;
+            font-weight: 500;
+        }
+        
+        .projects-header {
             padding: 40px 0 20px 0;
             display: flex;
             justify-content: center;
         }
         
-        .hero .description {
+        .projects-header .description {
             font-size: 1.1rem;
             max-width: 800px;
             color: #f1f5f9;
@@ -84,26 +89,52 @@
             line-height: 1.7;
         }
         
-        .gallery {
+        .projects-section {
             padding: 20px 0 80px 0;
         }
         
-        .gallery-grid {
+        .projects-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+            gap: 40px;
         }
         
-        .gallery-item {
+        .project-card {
+            background: #1f2937;
+            overflow: hidden;
+            border: 1px solid #374151;
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .project-image {
+            width: 100%;
             aspect-ratio: 16/9;
             overflow: hidden;
-            border: 1px solid #4b5563;
         }
         
-        .gallery-item img {
+        .project-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 24px;
+        }
+        
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #f1f5f9;
+            margin-bottom: 12px;
+        }
+        
+        .project-description {
+            color: #d1d5db;
+            font-size: 1rem;
+            line-height: 1.6;
         }
         
         @media (max-width: 1200px) {
@@ -113,9 +144,9 @@
         }
         
         @media (max-width: 900px) {
-            .gallery-grid {
+            .projects-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 30px;
             }
         }
         
@@ -128,17 +159,16 @@
                 gap: 20px;
             }
             
-            .hero .description {
-                font-size: 1rem;
+            .projects-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .projects-header {
+                padding: 60px 0 30px 0;
             }
         }
         
         @media (max-width: 600px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
             .logo-section {
                 align-items: center;
             }
@@ -147,30 +177,14 @@
                 flex-direction: column;
                 gap: 15px;
             }
-        }
-        
-        
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid #4b5563;
-            color: #9ca3af;
-            margin-top: 80px;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
+            
+            .projects-header h1 {
+                font-size: 2rem;
             }
             
-            .hero .subtitle {
-                font-size: 1.2rem;
+            .project-content {
+                padding: 20px;
             }
-            
-            .nav-links {
-                gap: 20px;
-            }
-            
         }
     </style>
 </head>
@@ -178,44 +192,48 @@
     <nav>
         <div class="container">
             <div class="logo-section">
-                <a href="/" class="logo">Jules Vannier</a>
+                <a href="index.html" class="logo">Jules Vannier</a>
                 <span class="nav-subtitle">Tools & Graphics Programmer</span>
             </div>
             <div class="nav-links">
-                <a href="/">Home</a>
-                <a href="projects.html">Projects</a>
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="current">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
 
     <main>
-        <section class="hero">
+        <section class="projects-header">
             <p class="description">
-                I make tools extending Unreal Engine editor for Midgar Studio.
-                Interested in proprietary game engines and modern real time rendering.
+                Custom Engines & Unreal Engine Tools.
             </p>
         </section>
         
-        <section class="gallery">
+        <section class="projects-section">
             <div class="container">
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="Img/Corvus.png" alt="Corvus">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="Img/PointLights.png" alt="Point Lights">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="Img/Water.png" alt="Water">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="Img/PBR.png" alt="PBR">
-                    </div>
+                <div class="projects-grid">
+                    <a href="corvus-engine.html" class="project-card">
+                        <div class="project-image">
+                            <img src="Img/Corvus.png" alt="Corvus Engine">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Corvus Engine</h3>
+                            <p class="project-description">Custom Engine, C++, D3D12</p>
+                        </div>
+                    </a>
+                    <a href="lacerta-engine.html" class="project-card">
+                        <div class="project-image">
+                            <img src="Img/Lacerta/scene.png" alt="Lacerta Engine">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Lacerta Engine</h3>
+                            <p class="project-description">Custom Engine, C++, D3D11</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
-
     </main>
 </body>
 </html>

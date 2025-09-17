@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corvus Engine - Jules Vannier</title>
+    <meta name="description" content="Corvus Engine - Custom Engine, C++, D3D12">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #e2e8f0;
+            background: #111827;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        nav {
+            padding: 20px 0;
+            border-bottom: 1px solid #4b5563;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f1f5f9;
+            text-decoration: none;
+            margin-bottom: 2px;
+        }
+        
+        .nav-subtitle {
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #f1f5f9;
+        }
+        
+        .project-header {
+            padding: 40px 0 20px 0;
+            text-align: center;
+        }
+        
+        .project-header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #f1f5f9;
+            margin-bottom: 10px;
+        }
+        
+        .project-content {
+            padding: 20px 0 80px 0;
+        }
+        
+        .content-section {
+            margin-bottom: 40px;
+        }
+        
+        .content-text {
+            font-size: 1.1rem;
+            color: #e2e8f0;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+        
+        .content-text strong {
+            color: #f1f5f9;
+            font-weight: 600;
+        }
+        
+        .content-image {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .content-image img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #4b5563;
+        }
+        
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .nav-links {
+                gap: 20px;
+            }
+            
+            .project-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .project-header {
+                padding: 60px 0 30px 0;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .logo-section {
+                align-items: center;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .project-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo-section">
+                <a href="index.html" class="logo">Jules Vannier</a>
+                <span class="nav-subtitle">Tools & Graphics Programmer</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-header">
+            <div class="container">
+                <h1>Corvus Engine</h1>
+            </div>
+        </section>
+        
+        <section class="project-content">
+            <div class="container">
+                <div class="content-section">
+                    <p class="content-text">
+                        Corvus Engine is a <strong>custom game engine</strong> built from scratch using modern C++ and DirectX 12. The engine focuses on <strong>high-performance rendering</strong> and <strong>real-time graphics</strong> capabilities. It features a modular architecture that allows for easy extension and customization of core systems.
+                    </p>
+                    <p class="content-text">
+                        The rendering pipeline implements <strong>physically-based shading</strong>, advanced lighting techniques, and supports <strong>multi-threaded command buffer generation</strong> for optimal GPU utilization. The engine also includes a comprehensive <strong>asset management system</strong> and <strong>scene graph</strong> for efficient resource handling.
+                    </p>
+                </div>
+                
+                <div class="content-image">
+                    <img src="Img/Corvus.png" alt="Corvus Engine Screenshot">
+                </div>
+                
+                <div class="content-section">
+                    <p class="content-text">
+                        Key features include <strong>deferred rendering</strong>, <strong>shadow mapping</strong>, and <strong>post-processing effects</strong>. The engine supports both <strong>forward and deferred rendering paths</strong> depending on the scene requirements. Development tools include a <strong>real-time editor</strong> with immediate visual feedback and <strong>debugging capabilities</strong>.
+                    </p>
+                    <p class="content-text">
+                        Future development plans include implementing <strong>ray tracing support</strong>, <strong>advanced particle systems</strong>, and <strong>audio integration</strong> to create a complete game development solution.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
