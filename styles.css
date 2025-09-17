@@ -108,7 +108,19 @@ nav .container {
     font-size: 3rem;
     font-weight: bold;
     color: #f1f5f9;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.header-image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header-image img {
+    max-width: 100%;
+    max-height: 400px;
+    height: auto;
+    border: 1px solid #4b5563;
 }
 
 /* Gallery styles */
