@@ -33,25 +33,66 @@
             <div class="container">
                 <div class="content-section">
                     <p class="content-text">
-                        Corvus Engine is a <strong>custom game engine</strong> built from scratch using modern C++ and DirectX 12. The engine focuses on <strong>high-performance rendering</strong> and <strong>real-time graphics</strong> capabilities. It features a modular architecture that allows for easy extension and customization of core systems.
+                        This custom engine is focused on graphics features and has no vocation to become a game engine for now. 
+                        It's a sandbox where I experiment with stuff I want to learn and implement on my own.
                     </p>
                     <p class="content-text">
-                        The rendering pipeline implements <strong>physically-based shading</strong>, advanced lighting techniques, and supports <strong>multi-threaded command buffer generation</strong> for optimal GPU utilization. The engine also includes a comprehensive <strong>asset management system</strong> and <strong>scene graph</strong> for efficient resource handling.
+                        This engine is using DirectX 12 graphics API. I already had an engine using D3D11 and I wanted to learn D3D12 and modern rendering techniques. <br>
+                        It uses <a href="https://github.com/ocornut/imgui" class="content-link" target="_blank">ImGui</a> for editor UI and Assimp to load gltf files. <br>
+                    </p>
+                    <p class="content-text">
+                        Current features : 
+                        <ul class="content-list">
+                            <li>Deferred shading</li>
+                            <li>PBR/IBL</li>
+                            <li>Instancing</li>
+                            <li>Point Lights</li>
+                            <li>Lights Volumes</li>
+                            <li>Shadow Maps</li>
+                            <li>Water Rendering</li>
+                            <ul class="content-list">
+                                <li>Tesselation & Sum Of Sines Waves</li>
+                                <li>Screen Space Reflections</li>
+                                <li>Refraction Distortion</li>
+                            </ul>
+                        </ul>
+                    </p>
+
+                     <p class="content-text">
+                        <br>
+                        <br>
+                        Some screenshots :
                     </p>
                 </div>
                 
                 <div class="content-image">
-                    <img src="Img/Corvus.png" alt="Corvus Engine Screenshot">
+                    <div class="image-with-caption">
+                        <img src="Img/Corvus.png" alt="Corvus Engine">
+                        <p class="image-caption">Corvus Editor</p>
+                    </div>
+                    <div class="image-with-caption">
+                        <img src="Img/PBR.png" alt="Corvus PBR">
+                        <p class="image-caption">PBR materials</p>
+                    </div>
+                    <div class="image-with-caption">
+                        <img src="Img/PointLights.png" alt="Corvus Lights">
+                        <p class="image-caption">100 point lights thanks to deferred</p>
+                    </div>
+                    <div class="image-with-caption">
+                        <img src="Img/Water.png" alt="Corvus Water">
+                        <p class="image-caption">Water rendering</p>
+                    </div>
                 </div>
-                
-                <div class="content-section">
-                    <p class="content-text">
-                        Key features include <strong>deferred rendering</strong>, <strong>shadow mapping</strong>, and <strong>post-processing effects</strong>. The engine supports both <strong>forward and deferred rendering paths</strong> depending on the scene requirements. Development tools include a <strong>real-time editor</strong> with immediate visual feedback and <strong>debugging capabilities</strong>.
-                    </p>
-                    <p class="content-text">
-                        Future development plans include implementing <strong>ray tracing support</strong>, <strong>advanced particle systems</strong>, and <strong>audio integration</strong> to create a complete game development solution.
-                    </p>
-                </div>
+
+                <div class="content-video">
+88 +                <iframe src="https://www.youtube.com/embed/MFnAGn3-_38" 
+                        title="Water Rendering - Custom Engine (C++/D3D12)" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+94 +            </div>
             </div>
         </section>
     </main>
